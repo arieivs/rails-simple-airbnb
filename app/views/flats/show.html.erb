@@ -1,0 +1,62 @@
+<div class="banner" style="background-image: url(<%= @flat.image_src %>)">
+</div>
+<div class="container position-relative">
+  <div class="container position-absolute margin-top-negative">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <h1><%= @flat.name %></h1>
+            <p><%= @flat.address %></p>
+          </div>
+        </div>
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <h3>A bit more about this flat...</h3>
+            <p><%= @flat.description %></p>
+          </div>
+        </div>
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <h3>Details</h3>
+            <p>
+              <i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %>
+              <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <h5>Book this place!</h5>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="from_date">From:</span>
+              </div>
+              <input type="text" class="form-control" placeholder="17/06/2020" aria-label="from" aria-describedby="from_date">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="to_date">To:</span>
+              </div>
+              <input type="text" class="form-control" placeholder="18/06/2020" aria-label="to" aria-describedby="to_date">
+            </div>
+            <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+          </div>
+        </div>
+        <div class="card shadow-sm mb-3">
+          <div class="card-header d-flex">
+            <div class="share-left flex-grow-1">Share </div>
+            <div class="share-right">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-pinterest-square"></i>
+              <i class="fas fa-envelope-square"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

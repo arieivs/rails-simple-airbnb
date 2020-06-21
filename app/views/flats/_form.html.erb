@@ -1,0 +1,14 @@
+<%= simple_form_for flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <div class="form-inline">
+    <div class="form-group mr-5"><%= f.input :price_per_night, label: 'Price per night ' %></div>
+    <div><%= f.input :number_of_guests, label: 'Number of guests ' %></div>
+  </div>
+  <%= f.input :image_src, label: 'Image URL' %>
+  <div>
+    <%= f.button :submit, class: "btn btn-dark" %>
+    <%= link_to 'Cancel', flats_path, class: "btn btn-outline-dark ml-3"%>
+  </div>
+<% end %>

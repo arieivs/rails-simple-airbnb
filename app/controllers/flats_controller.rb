@@ -15,7 +15,11 @@ class FlatsController < ApplicationController
   end
 
   def index
-    @flats = Flat.all
+    if params[:query]
+      @flats = Flat.where("name LIKE '%#{params[:query]}%'")
+    else
+      @flats = Flat.all
+    end
   end
 
   def show; end
@@ -33,6 +37,7 @@ class FlatsController < ApplicationController
 
   def destroy
     @flat.destroy
+    redirect_to flats_path
   end
 
   private

@@ -5,8 +5,8 @@
     <div class="row">
       <% @flats.each do |flat| %>
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card shadow-sm" style="width: 18rem;">
-            <%= image_tag(flat.image_src, :alt => "flat image", class: "card-img-top") %>
+          <div class="card shadow-sm mb-3" style="width: 18rem;">
+            <%= image_tag(flat.image_src, :alt => "flat image", class: "card-img-top", height: '200') %>
             <div class="card-header">
               <h5 class="card-title"><%= flat.name %></h5>
               <p class="card-text"><%= flat.description %></p>
@@ -18,8 +18,12 @@
 
             <div class="card-body">
               <%= link_to 'More info', flat_path(flat) %>
-              <%= link_to 'Edit' %>
-              <%= link_to 'Remove' %>
+              <%= link_to edit_flat_path(flat), class: "text-dark" do %>
+                <i class="fas fa-pencil-alt"></i>
+              <% end %>
+              <%= link_to flat_path(flat), method: :delete, data: {confirm: "Are you sure?"}, class: "text-danger" do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
             </div>
           </div>
         </div>

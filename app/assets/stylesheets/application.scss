@@ -12,16 +12,18 @@
 @import "components/index";
 @import "pages/index";
 
-.wrapper {
+.navbar {
   background-color: white;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
 }
 
 .banner {
   height: 300px;
-}
-
-.banner img {
-  object-fit: cover;
+  background-size: cover;
 }
 
 .margin-top-negative {
@@ -30,4 +32,12 @@
 
 .share-right i {
   font-size: 24px;
+}
+
+label.integer.optional {
+  margin-right: 10px;
+}
+
+.dark-grey {
+  color: #343A40;
 }
